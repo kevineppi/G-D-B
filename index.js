@@ -101,9 +101,5 @@ console.log(menu.title);
 
 //Aufgabe 6
 
-let user6
-{
-  name6 = "John",
-  go: function()) {console.log(this.name)} 
-}
+
 
