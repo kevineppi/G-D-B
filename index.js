@@ -19,6 +19,8 @@ user.name = "Pete";
 //delete user.name;
 document.getElementById("app").innerHTML =
 "Firstname : " + user.name + "," + " Lastname :" +user.surename;
+console.log("-------------------------------------");
+console.log("Aufgabe 1");
 console.log(user);
 console.log(user1);
 
@@ -34,12 +36,15 @@ function isEmpty(obj) {
   }
   return true;
 }
+console.log("-------------------------------------");
+console.log("Aufgabe 2");
 console.log(isEmpty(schedule));
 console.log(isEmpty(schedule2));
 
 
 //Aufgabe 3
-
+console.log("-------------------------------------");
+console.log("Aufgabe 3");
 const usera3 = {name : "John"};
 console.log(usera3.name);
 usera3.name = "Adilette";
@@ -69,6 +74,8 @@ function istleer(obj)
     }
     return false;
 };
+console.log("-------------------------------------");
+console.log("Aufgabe 4");
 console.log(istleer(salaries));
 
 
@@ -94,12 +101,27 @@ function multiplyNumeric(obj)
     }
   }
 }
+
 multiplyNumeric(menu);
+console.log("-------------------------------------");
+console.log("Aufgabe 5");
 console.log(menu.width);
 console.log(menu.length);
 console.log(menu.title);
 
 //Aufgabe 6
+console.log("-------------------------------------");
+console.log("Aufgabe 6");
+
+let user6 =
+{
+  name6 : "John",
+  go: function()
+  {
+   alert(this.name6);
+  }
+ 
+}
 
 
 
