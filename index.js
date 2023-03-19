@@ -113,15 +113,110 @@ console.log(menu.title);
 console.log("-------------------------------------");
 console.log("Aufgabe 6");
 
-let user6 =
-{
-  name6 : "John",
-  go: function()
-  {
-   alert(this.name6);
+const user6 = {
+  name6: "John",
+  go() {
+    console.log(this.name6);
   }
- 
+};
+user6.go();
+
+
+//Aufgabe 7
+console.log("-------------------------------------");
+console.log("Aufgabe 7");
+
+class Animal 
+{
+  constructor(name)
+  {
+    this.name = name;
+  }  
+}
+class Rabbit extends Animal
+{
+  constructor(name)
+  {
+    super(name)
+    this.created = Date.now();
+  }
+}
+let rabbit = new Rabbit("White rabbit");
+console.log(rabbit);
+
+
+//Aufgabe 8
+console.log("-------------------------------------");
+console.log("Aufgabe 8");
+
+class Node {
+  constructor(data) {
+    this.data = data;
+    this.next = null;
+  }
 }
 
+class List {
+  constructor() {
+    this.head = null;
+  }
 
+  insertLast(data) {
+    let new_node = new Node(data);
+    if (!this.head) {
+      this.head = new_node;
+    } else {
+      let curr_node = this.head;
+      while (curr_node.next) {
+        curr_node = curr_node.next;
+      }
+      curr_node.next = new_node;
+    }
+  }
+
+  insertFirst(data) {
+    let new_node = new Node(data);
+    new_node.next = this.head;
+    this.head = new_node;
+  }
+
+  search(data) {
+    let curr_node = this.head;
+    while (curr_node) {
+      if (curr_node.data === data) {
+        return curr_node;
+      }
+      curr_node = curr_node.next;
+    }
+    return null;
+  }
+
+  delete(data) {
+    if (!this.head) {
+      return;
+    }
+    if (this.head.data === data) {
+      this.head = this.head.next;
+      return;
+    }
+    let curr_node = this.head;
+    while (curr_node.next) {
+      if (curr_node.next.data === data) {
+        curr_node.next = curr_node.next.next;
+        return;
+      }
+      curr_node = curr_node.next;
+    }
+  }
+
+  printList() {
+    let curr_node = this.head;
+    let list_str = '';
+    while (curr_node) {
+      list_str += curr_node.data + ' ';
+      curr_node = curr_node.next;
+    }
+    console.log(list_str.trim());
+  }
+}
 
